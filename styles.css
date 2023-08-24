@@ -1,41 +1,64 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
 body {
   display: grid;
   min-height: 100vh;
   grid-template: auto 1fr / 280px 1fr;
-
+  font-family: 'Questrial', sans-serif;
 }
 
 .header {
   grid-area: 1 / 2 / 2 / 3;
-  
+  display: grid;
+  grid-template: auto auto / 1fr 1fr 1fr 1fr;
+  align-items: center;
+  padding: 20px 40px;
+  row-gap: 15px;
+  box-shadow: 5px 5px 10px rgba(202, 202, 202, 0.7);
 }
 
 .sidebar {
   grid-area: 1 / 1 / 3 / 2;
   font-size: 1rem;
+  background-color: antiquewhite;
 }
 
 .sidebar-header {
-  margin: 20px;
-  font-size: 1.7rem;
+  margin: 20px 30px;
+  font-family: 'Rozha One', serif;
+  font-size: 2rem;
   display: grid;
   grid-template-columns: 50px auto;
+  align-items: center;
 }
 
 .dashboard-icon {
-  height: 35px;
+  height: 30px;
+  justify-self: center;
 }
 
 .nav1, .nav2 {
   display: grid;
-  grid-template: auto / 40px auto;
-  row-gap: 13px;
-  margin: 30px 30px 40px 30px;
+  grid-template: auto / 50px auto;
+  row-gap: 15px;
+  margin: 40px 30px;
   font-size: 1rem;
+  font-family: 'Questrial', sans-serif;
+  align-items: center;
 }
 
 .icons {
-  height: 15px;
+  height: 18px;
+  justify-self: center;
+  /* margin-left: 6px; */
 }
 
 .mainContent {
@@ -43,3 +66,78 @@ body {
   
 }
 
+.user {
+  border-radius: 50px;
+  height: 35px;
+  background: rgb(255, 197, 196);
+}
+
+.search {
+  grid-area: 1 / 1 / 2 / 4;
+  /* align-items: center; */
+}
+
+input {
+  width: 80%;
+  height: 1.2rem;
+  border: 0px solid black;
+  border-radius: 30px;
+  background: lavender;
+  margin: 0 15px;
+  align-items: center;
+}
+
+.right-header {
+  grid-area: 1 / 4 / 2 / 5;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  column-gap: 15px;
+}
+
+.right-header span {
+  font-size: 0.8rem;
+}
+
+.right-header .user {
+  height: 30px;
+  align-content: center;
+}
+
+.profile-header {
+  grid-area: 2 / 1 / 3 / 3;
+  display: grid;
+  grid-template: auto auto / auto 1fr;
+  column-gap: 15px;
+  align-items: center;
+}
+
+.profile-header .user {
+  grid-area: 1 / 1 / 3 / 2;
+  height: 50px;
+  margin: 0 auto;
+}
+
+.greeting {
+  font-size: 0.75rem;
+}
+
+.username {
+  font-size: 1.15rem;
+}
+
+.header-buttons {
+  grid-area: 2 / 3 / 2 / 5;
+  text-align: end;
+}
+
+.header-buttons button {
+  border-radius: 40px;
+  border: 0px solid black;
+  width: 70px;
+  height: 25px;
+  font-size: 0.8rem;
+  margin: 5px;
+}
