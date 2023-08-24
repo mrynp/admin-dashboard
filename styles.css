@@ -63,13 +63,17 @@ body {
 
 .mainContent {
   grid-area: 2 / 2 / 3 / 3;
-  
+  display: grid;
+  grid-template: auto auto / 70% 30%;
+  padding: 30px 20px;
+  column-gap: 20px;
+  row-gap: 20px;
 }
 
 .user {
   border-radius: 50px;
   height: 35px;
-  background: rgb(255, 197, 196);
+
 }
 
 .search {
@@ -85,16 +89,19 @@ input {
   background: lavender;
   margin: 0 15px;
   align-items: center;
+  font-size: 0.9rem;
+  padding: 10px;
 }
 
 .right-header {
   grid-area: 1 / 4 / 2 / 5;
   align-items: center;
   text-align: center;
-  justify-content: center;
+  justify-content: end;
   display: grid;
   grid-template-columns: auto auto auto;
   column-gap: 15px;
+  min-width: 150px;
 }
 
 .right-header span {
@@ -112,6 +119,7 @@ input {
   grid-template: auto auto / auto 1fr;
   column-gap: 15px;
   align-items: center;
+  min-width: 250px;
 }
 
 .profile-header .user {
@@ -131,13 +139,35 @@ input {
 .header-buttons {
   grid-area: 2 / 3 / 2 / 5;
   text-align: end;
+  min-width: 250px;
 }
 
 .header-buttons button {
   border-radius: 40px;
   border: 0px solid black;
   width: 70px;
-  height: 25px;
+  height: 35px;
   font-size: 0.8rem;
   margin: 5px;
 }
+
+.projects-grid {
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+.announcements-grid {
+  grid-area: 1 / 2 / 2 / 3;
+}
+
+.trending-grid {
+  grid-area: 2 / 2 / 3 / 3;
+}
+
+.mainContent .label {
+  font-size: 1rem;
+}
+
+.trending .user {
+  height: 30px;
+}
+
